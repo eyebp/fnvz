@@ -104,7 +104,7 @@ while True:                                                             # consta
         for existing_stock in f:
             existing_stocks.append(existing_stock)
         print(len(existing_stocks), 'existing stocks')
-        # get screener
+        # get screener: insert here full filters url from fv
         r = s.get('http://finviz.com/screener.ashx?v=111&f=fa_debteq_u1,fa_eps5years_o20,fa_peg_u2,fa_pfcf_u60,fa_roa_pos,fa_roe_o15,fa_roi_o15&ft=4&o=-marketcap')
         while True:             # loop breaks when last page is reached (in line 123)
             bs = BeautifulSoup(r.content)          # parse html
